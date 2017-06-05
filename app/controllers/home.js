@@ -19,6 +19,7 @@ router.get('/', function (req, res, next) {
       dateTime: dateTime.toISOString(),
       hostName: os.hostname(),
       appName: config.app.name,
+      buildName: 'super hot',
       articles: articles
     });
 });
