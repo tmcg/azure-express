@@ -1,3 +1,6 @@
+
+var os = require('os');
+
 var express = require('express'),
   router = express.Router(),
   Article = require('../models/article');
@@ -9,9 +12,11 @@ module.exports = function (app) {
 router.get('/', function (req, res, next) {
   var articles = [new Article(), new Article()];
   var dateTime = new Date();
+
     res.render('index', {
       title: 'Microsoft Azure App Services',
       dateTime: dateTime.toISOString(),
+      hostName: os.hostname(),
       articles: articles
     });
 });
