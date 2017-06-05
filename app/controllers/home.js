@@ -8,8 +8,10 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
   var articles = [new Article(), new Article()];
+  var dateTime = new Date();
     res.render('index', {
       title: 'Microsoft Azure App Services',
+      dateTime: dateTime.toISOString(),
       articles: articles
     });
 });
