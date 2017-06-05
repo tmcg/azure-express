@@ -1,5 +1,6 @@
 
 var os = require('os');
+var config = require('../../config/config');
 
 var express = require('express'),
   router = express.Router(),
@@ -17,6 +18,7 @@ router.get('/', function (req, res, next) {
       title: 'Microsoft Azure App Services',
       dateTime: dateTime.toISOString(),
       hostName: os.hostname(),
+      appName: config.app.name,
       articles: articles
     });
 });

@@ -6,7 +6,7 @@ var config = {
   development: {
     root: rootPath,
     app: {
-      name: 'azure-express'
+      name: 'azure-express (dev)'
     },
     port: process.env.PORT || 3000,
   },
@@ -14,7 +14,7 @@ var config = {
   test: {
     root: rootPath,
     app: {
-      name: 'azure-express'
+      name: 'azure-express (test)'
     },
     port: process.env.PORT || 3000,
   },
@@ -22,7 +22,7 @@ var config = {
   production: {
     root: rootPath,
     app: {
-      name: 'azure-express'
+      name: 'azure-express (prod)'
     },
     port: process.env.PORT || 3000,
   }
