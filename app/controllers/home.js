@@ -23,3 +23,7 @@ router.get('/', function (req, res, next) {
       articles: articles
     });
 });
+
+router.get('/throw', function(req, res, next) {
+  throw new Error("Uh-oh!");
+});
